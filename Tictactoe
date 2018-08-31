@@ -1,0 +1,198 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
+using namespace std;
+int i = 9;
+int arr[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+bool win(int arr[i]);
+void Board();
+int main()
+{
+	int player = 1;
+	int input;
+	bool win = false;
+	
+	Board();
+	
+	cout << "Welcome to tic tac toe game " << endl;
+	cout << "PLAYER 1 IS X AND PLAYER 2 IS O" << endl;
+	while(win == false){
+		cout << "Player " << player << " turn" << endl;
+		cin >> input;
+		if(player == 1){
+			if(input == 1){
+				arr[0] = 'X';
+				Board();
+				player = 2;
+			}
+			if(input == 2){
+				arr[1] = 'X';
+				Board();
+				player = 2;
+			}
+			if(input == 3){
+				arr[2] = 'X';
+				Board();
+				player = 2;
+			}
+			if(input == 4){
+				arr[3] = 'X';
+				Board();
+				player = 2;
+			}
+			if(input == 5){
+				arr[4] = 'X';
+				Board();
+				player = 2;
+			}
+			if(input == 6){
+				arr[5] = 'X';
+				Board();
+				player = 2;
+			}
+			if(input == 7){
+				arr[6] = 'X';
+				Board();
+				player = 2;
+			}
+			if(input == 8){
+				arr[7] = 'X';
+				Board();
+				player = 2;
+			}
+			if(input == 9){
+				arr[8] = 'X';
+				Board();
+				player = 2;
+			}
+		}
+		else if(player == 2){
+			
+			if(input == 1){
+				arr[0] = 'O';
+				Board();
+				player = 1;
+			}
+			if(input == 2){
+				arr[1] = 'O';
+				Board();
+				player = 1;
+			}
+			if(input == 3){
+				arr[2] = 'O';
+				Board();
+				player = 1;
+			}
+			if(input == 4){
+				arr[3] = 'O';
+				Board();
+				player = 1;
+			}
+			if(input == 5){
+				arr[4] = 'O';
+				Board();
+				player = 1;
+			}
+			if(input == 6){
+				arr[5] = 'O';
+				Board();
+				player = 1;
+			}
+			if(input == 7){
+				arr[6] = 'O';
+				Board();
+				player = 1;
+			}
+			if(input == 8){
+				arr[7] = 'O';
+				Board();
+				player = 1;
+			}
+			if(input == 9){
+				arr[8] = 'O';
+				Board();
+				player = 1;
+			}
+		}
+		
+
+		if((arr[0] == 'X') && (arr[1] == 'X') && (arr[2] == 'X')){
+			cout << "CONGRATS PLAYER 1 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[3] == 'X') && (arr[4] == 'X') && (arr[5] == 'X')){
+			cout << "CONGRATS PLAYER 1 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[6] == 'X') && (arr[7] == 'X') && (arr[8] == 'X')){
+			cout << "CONGRATS PLAYER 1 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[0] == 'X') && (arr[3] == 'X') && (arr[6] == 'X')){
+			cout << "CONGRATS PLAYER 1 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[1] == 'X') && (arr[4] == 'X') && (arr[7] == 'X')){
+			cout << "CONGRATS PLAYER 1 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[2] == 'X') && (arr[5] == 'X') && (arr[8] == 'X')){
+			cout << "CONGRATS PLAYER 1 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[0] == 'X') && (arr[4] == 'X') && (arr[8] == 'X')){
+			cout << "CONGRATS PLAYER 1 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[2] == 'X') && (arr[4] == 'X') && (arr[6] == 'X')){
+			cout << "CONGRATS PLAYER 1 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[0] == 'O') && (arr[1] == '0') && (arr[2] == 'O')){
+			cout << "CONGRATS PLAYER 2 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[3] == 'O') && (arr[4] == '0') && (arr[5] == 'O')){
+			cout << "CONGRATS PLAYER 2 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[6] == 'O') && (arr[7] == '0') && (arr[8] == 'O')){
+			cout << "CONGRATS PLAYER 2 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[0] == 'O') && (arr[3] == '0') && (arr[6] == 'O')){
+			cout << "CONGRATS PLAYER 2 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[1] == 'O') && (arr[4] == '0') && (arr[7] == 'O')){
+			cout << "CONGRATS PLAYER 2 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[2] == 'O') && (arr[5] == '0') && (arr[8] == 'O')){
+			cout << "CONGRATS PLAYER 2 YOU WON" << endl;
+		win = true;
+	}
+
+	else if((arr[0] == 'O') && (arr[4] == '0') && (arr[8] == 'O')){
+			cout << "CONGRATS PLAYER 2 YOU WON" << endl;
+		win = true;
+	}
+	else if((arr[2] == 'O') && (arr[4] == '0') && (arr[6] == 'O')){
+			cout << "CONGRATS PLAYER 2 YOU WON" << endl;
+		win = true;
+	}
+	}
+	
+
+
+	return 0;
+}
+void Board(){
+	cout << arr[0] << ' '<< '|' << arr[1] << ' ' << '|' << arr[2] << endl;
+	cout << "__|__|___" << endl;
+	cout << arr[3] << ' ' << '|' << arr[4] << ' ' << '|' << arr[5] << endl;
+	cout << "__|__|___" << endl;
+	cout << arr[6] << ' ' << '|' << arr[7] << ' ' << '|' << arr[8] << endl;
+}
+	
